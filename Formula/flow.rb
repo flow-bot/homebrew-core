@@ -14,6 +14,7 @@ class Flow < Formula
     sha256 "169ec8af94a62bd05bc75b56fe21395f2421d20bf094eb4afa17381514e60860" => :high_sierra
   end
 
+  depends_on "mercurial" => :build
   depends_on "ocaml" => :build
   depends_on "opam" => :build
 
