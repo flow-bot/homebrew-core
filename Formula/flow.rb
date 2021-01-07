@@ -20,13 +20,6 @@ class Flow < Formula
   uses_from_macos "rsync" => :build
   uses_from_macos "unzip" => :build
 
-  # Fix "No available version of ocaml-base-compiler satisfies the constraints" error
-  # See https://github.com/facebook/flow/pull/8559
-  patch do
-    url "https://github.com/facebook/flow/commit/073b02dc69f8ddc901775dd13200b46e3e4f8c8d.patch?full_index=1"
-    sha256 "dccac3dfe0d893392517f9f9c85d37c00691e947a0c76c66bee369fe1e317682"
-  end
-
   def install
     system "make", "all-homebrew"
 
